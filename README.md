@@ -17,10 +17,14 @@
 
 - await ctx.render('index', ctx.state) // 通过 views 下的 index.njk 渲染
 - 路由只支持 routes 下 index 的
-  **前端渲染**
+
+**前端渲染**
+
 - 在 public 文件下的文件可直接访问，它所加载页面里的 js,访问连接，传送 json 数据
 
 ### 项目部署
+
+当前页面里 deploy.md 有详细解释
 
 ### 运行查看项目
 
@@ -30,8 +34,23 @@
 
 1. git clone 项目
 2. cnpm install 下载依赖
-3. node app.js 运行项目
-4. 访问 http://loclahost:5000/login.js
+3. 修改 connection.js 文件  
+   修改数据库连接的用户名和密码为你们本地的用户名和密码
+
+```
+let connection = mysql.createConnection({
+  host: "localhost",
+  user: "xxx",
+  password: "xxxx",
+  database: "chat",
+});
+```
+
+4. 导入数据库配置
+   注意运行下面这句话时的位置
+   mysql -uroot -pxxxx < chat_room.sql
+5. node app.js 运行项目
+6. 访问 http://loclahost:5000/login.html
 
 ### 新建项目
 
