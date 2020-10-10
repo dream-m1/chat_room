@@ -50,7 +50,7 @@ let connection = mysql.createConnection({
    注意运行下面这句话时的位置
    mysql -uroot -pxxxx < chat_room.sql
 5. node app.js 运行项目
-6. 访问 http://loclahost:5000/login.html
+6. 访问 http://localhost:5000/login.html
 
 ### 新建项目
 
